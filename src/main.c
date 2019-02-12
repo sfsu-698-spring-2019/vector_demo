@@ -18,7 +18,7 @@ int main() {
     __m128d vec3;
 
     // Unroll loop and add 2 items at a time
-    for (int i = 0; i < 8 / 2; i += 2) {
+    for (int i = 0; i < 8; i += 2) {
         vec1 = _mm_load_pd(&A[i]);
         vec2 = _mm_load_pd(&B[i]);
         vec3 = _mm_mul_pd(vec1, vec2);
